@@ -1,9 +1,0 @@
-xyz\apollo30\leadapi\api\LeadProvider.class
-xyz\apollo30\leadapi\exception\NumberOutOfRangeException.class
-xyz\apollo30\leadapi\internal\Service.class
-xyz\apollo30\leadapi\LeadHook.class
-xyz\apollo30\leadapi\internal\ServiceProvider.class
-xyz\apollo30\leadapi\api\team\ITeamMember.class
-xyz\apollo30\leadapi\api\team\ITeam.class
-xyz\apollo30\leadapi\ILeadAPI.class
-xyz\apollo30\leadapi\exception\OccupiedTeamNumberException.class
