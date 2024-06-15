@@ -4,8 +4,8 @@ Lead API allows you to hook into the Lead Plugin that allows players to create v
 ---
 
 ## Donating
-Lead among other various utility plugins are free to use!
-If you wish to help fund future projects, such as purchasing servers, resources, art, etc... You can donate to my ko-fi!
+Lead among other various plugins I have worked on are free to use!
+Please consider donating to my ko-fi! It helps fund other projects that I am passionate about.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E6RSLWV)
 
