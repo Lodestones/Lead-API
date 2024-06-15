@@ -1,0 +1,5 @@
+name: Lead-API
+version: '${project.version}'
+main: xyz.apollo30.leadapi.LeadAPI
+api-version: '1.20'
+load: STARTUP
