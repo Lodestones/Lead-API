@@ -15,6 +15,7 @@ import java.util.UUID;
  */
 public interface ITeam {
 
+    // TODO: 6/15/24 - Possible configurable color selection?
     String[] AVAILABLE_COLORS = {
             "#C36BFF",
             "#FF2DEA",

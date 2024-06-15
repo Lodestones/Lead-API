@@ -5,6 +5,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nullable;
 
+/**
+ * Service Provider that hooks into Bukkit's Plugin Service.
+ *
+ * @param <T> {@link Service}
+ * @author John Aquino
+ */
 public class ServiceProvider<T extends Service> {
     protected T service = null;
 
