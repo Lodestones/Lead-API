@@ -1,6 +1,14 @@
 # Lead API
 Lead API allows you to hook into the Lead Plugin that allows players to create visual based teams to help distinguish who is in whose team.
 
+## Table of Contents
+1. [Installing the Lead API](#installation)
+2. [What's in the Lead API](#api)
+3. [Using the Lead API](#usage)
+4. [Contributing to the Lead API](#contributing)
+5. [Lead API's License](#license)
+6. [Donating to help support the Lead API](#donating)
+
 ---
 
 ## Donating
@@ -12,6 +20,44 @@ Please consider donating to my ko-fi! It helps fund other projects that I am pas
 https://ko-fi.com/apollo30
 
 ---
+
+# Installation
+Below shows you how to install Lead API into your project.
+## Gradle
+Add it in your root build.gradle at the end of repositories:
+```java
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+        repositories {
+		mavenCentral()
+		maven { url 'https://jitpack.io' }
+        }
+    }
+```
+Add the dependency
+```java
+    dependencies {
+        implementation 'com.github.Lodestones:Lead:beta-v1.0.0'
+    }
+```
+## Maven
+Add the JitPack repository to your build file
+```xml
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+```
+Add the dependency
+```xml
+    <dependency>
+        <groupId>com.github.Lodestones</groupId>
+        <artifactId>Lead</artifactId>
+        <version>beta-v1.0.0</version>
+    </dependency>
+```
 
 # Documentation
 ## API
