@@ -8,7 +8,7 @@ public class LeadProvider extends ServiceProvider<ILeadAPI> {
 
     public LeadProvider(JavaPlugin plugin) {
         super(plugin, ILeadAPI.class, "LeadAPI");
-        plugin.getLogger().info("Successfully hooked into Teams!");
+        plugin.getLogger().info("Successfully hooked into Lead!");
     }
 
 }
