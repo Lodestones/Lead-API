@@ -7,7 +7,7 @@ import xyz.apollo30.leadapi.internal.ServiceProvider;
 public class LeadProvider extends ServiceProvider<ILeadAPI> {
 
     public LeadProvider(JavaPlugin plugin) {
-        super(plugin, ILeadAPI.class, "ArcaneTeam");
+        super(plugin, ILeadAPI.class, "LeadAPI");
         plugin.getLogger().info("Successfully hooked into Teams!");
     }
 
