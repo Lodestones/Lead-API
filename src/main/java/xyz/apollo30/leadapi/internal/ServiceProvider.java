@@ -20,6 +20,7 @@ public class ServiceProvider<T extends Service> {
             plugin.getLogger().severe("Could not hook into " + name + ". This may cause major errors in the plugin.");
         } else {
             this.service = provider.getProvider();
+            plugin.getLogger().info("Successfully hooked into " + name + "!");
         }
     }
 
