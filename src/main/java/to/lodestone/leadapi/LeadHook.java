@@ -1,7 +1,7 @@
-package xyz.apollo30.leadapi;
+package to.lodestone.leadapi;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import xyz.apollo30.leadapi.api.LeadProvider;
+import to.lodestone.leadapi.api.LeadProvider;
 
 /**
  * The main class to hook into the Lead API.

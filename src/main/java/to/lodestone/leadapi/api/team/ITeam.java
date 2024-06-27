@@ -1,9 +1,9 @@
-package xyz.apollo30.leadapi.api.team;
+package to.lodestone.leadapi.api.team;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.jetbrains.annotations.NotNull;
-import xyz.apollo30.leadapi.exception.NumberOutOfRangeException;
-import xyz.apollo30.leadapi.exception.OccupiedTeamNumberException;
+import to.lodestone.leadapi.exception.NumberOutOfRangeException;
+import to.lodestone.leadapi.exception.OccupiedTeamNumberException;
 
 import javax.annotation.Nullable;
 import java.util.List;

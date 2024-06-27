@@ -1,8 +1,8 @@
-package xyz.apollo30.leadapi;
+package to.lodestone.leadapi;
 
 import org.jetbrains.annotations.Nullable;
-import xyz.apollo30.leadapi.api.team.ITeam;
-import xyz.apollo30.leadapi.internal.Service;
+import to.lodestone.bookshelfapi.api.internal.Service;
+import to.lodestone.leadapi.api.team.ITeam;
 
 import java.util.List;
 import java.util.UUID;

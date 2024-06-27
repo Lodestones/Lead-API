@@ -1,4 +1,4 @@
-package xyz.apollo30.leadapi.exception;
+package to.lodestone.leadapi.exception;
 
 public class NumberOutOfRangeException extends Throwable {
 }

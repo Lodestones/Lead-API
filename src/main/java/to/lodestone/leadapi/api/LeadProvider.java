@@ -1,8 +1,8 @@
-package xyz.apollo30.leadapi.api;
+package to.lodestone.leadapi.api;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import xyz.apollo30.leadapi.ILeadAPI;
-import xyz.apollo30.leadapi.internal.ServiceProvider;
+import to.lodestone.bookshelfapi.api.internal.ServiceProvider;
+import to.lodestone.leadapi.ILeadAPI;
 
 public class LeadProvider extends ServiceProvider<ILeadAPI> {
 

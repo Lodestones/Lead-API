@@ -1,4 +1,4 @@
-package xyz.apollo30.leadapi.api.team;
+package to.lodestone.leadapi.api.team;
 
 import java.util.UUID;
 
