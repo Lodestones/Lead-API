@@ -72,9 +72,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.Lodestones</groupId>
-            <artifactId>Bookshelf</artifactId>
-            <version>beta-v1.0.0</version>
+            <groupId>to.lodestone</groupId>
+            <artifactId>Bookshelf-API</artifactId>
+            <version>1.0.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

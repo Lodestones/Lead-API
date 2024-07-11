@@ -4,7 +4,7 @@
   <groupId>to.lodestone</groupId>
   <artifactId>Lead-API</artifactId>
   <name>Lead-API</name>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <build>
     <resources>
       <resource>
