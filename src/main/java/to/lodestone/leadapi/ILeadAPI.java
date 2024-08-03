@@ -1,48 +1,50 @@
 package to.lodestone.leadapi;
 
+import org.bukkit.entity.Item;
+import org.bukkit.scoreboard.Team;
 import org.jetbrains.annotations.Nullable;
-import to.lodestone.bookshelfapi.api.internal.Service;
-import to.lodestone.leadapi.api.team.ITeam;
+import to.lodestone.leadapi.api.ITeam;
+import to.lodestone.leadapi.api.exception.TeamAlreadyExistsException;
+import to.lodestone.leadapi.api.exception.TeamNotFoundException;
 
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Official API of the Lead Plugin
- * This interface allows access to certain internals of the teams plugin.
- *
- * @author Apollo
- */
-public interface ILeadAPI extends Service {
+public interface ILeadAPI {
 
-    /**
-     * Updates the tab list, ensuring that all teams are up-to-date.
-     * @author Apollo
-     */
-    void updateTab();
+    void save();
+
+    @Nullable
+    ITeam getTeam(UUID member);
 
     /**
      * Fetches all active teams, even ones that are offline.
-     * @return {@link List<ITeam>} All active teams.
+     * @return {@link List<Team>} All active teams.
      */
     List<ITeam> getTeams();
 
     /**
-     * Fetches an {@link ITeam} based off of its number.
+     * Fetches an {@link Team} based off a number, if it is a number.
      *
-     * @param number The number of the {@link ITeam}
-     * @return {@link ITeam} If present, an {@link ITeam}. Otherwise null.
+     * @param number The number of the {@link Team}
+     * @return {@link Team} If present, an {@link Team}. Otherwise null.
      */
-    @Nullable
     ITeam getTeam(int number);
 
     /**
-     * Fetches an {@link ITeam} based off of whether it contains a {@link org.bukkit.entity.Player}'s {@link UUID}.
+     * Fetches an {@link ITeam} based off of its name.
      *
-     * @param uniqueId A {@link org.bukkit.entity.Player}'s {@link UUID}
+     * @param name The name of the {@link ITeam}
      * @return {@link ITeam} If present, an {@link ITeam}. Otherwise null.
      */
     @Nullable
-    ITeam getTeam(UUID uniqueId);
+    ITeam getTeam(String name);
+
+    void update();
+
+    ITeam createTeam(String name) throws TeamAlreadyExistsException;
+
+    ITeam deleteTeam(String name) throws TeamNotFoundException;
+
 
 }
