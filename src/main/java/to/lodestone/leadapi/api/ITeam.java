@@ -2,7 +2,6 @@ package to.lodestone.leadapi.api;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.scoreboard.Team;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -58,6 +57,7 @@ public interface ITeam {
      */
     String getColor();
 
+    void setId(String id);
     void setName(String name);
 
     @Nullable
@@ -87,5 +87,17 @@ public interface ITeam {
      */
     void save(FileConfiguration file);
 
+    String getId();
     String getName();
+
+    void setCollidable(Team.OptionStatus status);
+
+    Team.OptionStatus getCollidable();
+
+    void setNameTagVisibility(Team.OptionStatus status);
+    Team.OptionStatus getNameTagVisibility();
+
+    void setFriendlyFireAllowed(boolean value);
+
+    boolean isFriendlyFireAllowed();
 }

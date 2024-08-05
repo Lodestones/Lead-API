@@ -1,6 +1,5 @@
 package to.lodestone.leadapi;
 
-import org.bukkit.entity.Item;
 import org.bukkit.scoreboard.Team;
 import org.jetbrains.annotations.Nullable;
 import to.lodestone.leadapi.api.ITeam;
