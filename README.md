@@ -37,7 +37,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```java
     dependencies {
-        implementation 'com.github.Lodestones:Lead:beta-v1.0.0'
+        implementation 'com.github.Lodestones:Lead:beta-v1.0.5'
     }
 ```
 ## Maven
@@ -55,7 +55,7 @@ Add the dependency
     <dependency>
         <groupId>com.github.Lodestones</groupId>
         <artifactId>Lead</artifactId>
-        <version>beta-v1.0.0</version>
+        <version>beta-v1.0.5</version>
     </dependency>
 ```
 
@@ -67,17 +67,20 @@ To hook into the Lead API, you can use the [LeadHook](https://github.com/Lodesto
 
 ## Usage
 Hooking into the Lead API.
+
 ```java
-public class MainPlugin extends JavaPlugin {       
-    private LeadHook leadHook; // Declare Lead Hook Variable.
-    @Override       
-    public void onEnable() {           
-        leadHook = new LeadHook(this); // Hook into the Lead API.       
-    }         
-    
+import to.lodestone.leadapi.LeadAPI;
+
+public class MainPlugin extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+
+    }
+
     public ILeadAPI lead() { // use this method to access the Lead API.
-        return leadHook.api(); // Retrieve the Lead API from the Hook.       
-    }  
+        return LeadAPI.getApi(); // Retrieve the Lead API from the Hook.       
+    }
 }
 ```
 Fetching a team based off of a Player's UUID.
@@ -85,13 +88,13 @@ Fetching a team based off of a Player's UUID.
 Player player = Bukkit.getPlayer("Apollo30");
 @Nullable ITeam team = plugin.lead().getTeam(player.getUniqueId());
 if (team == null) return; // player doesn't have team.
-player.sendMessage(Component.empty(String.format("You are in team %s", team.getNumber()))); // "You are in team #45"
+player.sendMessage(Component.text(String.format("You are in team %s", team.getNumber()))); // "You are in team #45"
 ```
 Fetching a team based off of the team number.
 ```java
 @Nullable ITeam team = plugin.lead().getTeam(5);
 if (team == null) return; // Team doesn't exist.
-Bukkit.broadcast(Component.empty(String.format("Team %s exists!", team.getNumber()))); // "Team #5 exists!"
+Bukkit.broadcast(Component.text(String.format("Team %s exists!", team.getNumber()))); // "Team #5 exists!"
 ```
 
 ---

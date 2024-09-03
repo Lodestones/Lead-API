@@ -5,6 +5,7 @@ import org.bukkit.scoreboard.Team;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
@@ -45,10 +46,19 @@ public interface ITeam {
 
     /**
      * Retrieves all active invitations sent out by the {@link Team}.
+     * NOTE: This list is Immutable. Meant for READ ONLY.
      *
      * @return A list of {@link UUID}s representing active invitations.
      */
-    ArrayList<UUID> getInvitations();
+    List<UUID> getInvitations();
+
+    void addInvitation(UUID uniqueId);
+
+    void removeInvitation(UUID uniqueId);
+
+    void addMember(ITeamMember member);
+
+    void removeMember(ITeamMember member);
 
     /**
      * Retrieves the hexadecimal color representation (e.g., "#FF0000" for Red) of the {@link Team}.
