@@ -37,7 +37,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```java
     dependencies {
-        implementation 'com.github.Lodestones:Lead:beta-v1.0.5'
+        implementation 'com.github.Lodestones:Lead:1.0.6'
     }
 ```
 ## Maven
@@ -55,7 +55,7 @@ Add the dependency
     <dependency>
         <groupId>com.github.Lodestones</groupId>
         <artifactId>Lead</artifactId>
-        <version>beta-v1.0.5</version>
+        <version>1.0.6</version>
     </dependency>
 ```
 

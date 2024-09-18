@@ -1,6 +1,7 @@
 package to.lodestone.leadapi.api;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
 
 import javax.annotation.Nullable;
@@ -37,6 +38,9 @@ public interface ITeam {
      */
     void removeMember(UUID uniqueId);
 
+    void addMember(Player player);
+    void addMember(ITeamMember player);
+
     /**
      * Get the team's name as a number.
      *
@@ -55,10 +59,6 @@ public interface ITeam {
     void addInvitation(UUID uniqueId);
 
     void removeInvitation(UUID uniqueId);
-
-    void addMember(ITeamMember member);
-
-    void removeMember(ITeamMember member);
 
     /**
      * Retrieves the hexadecimal color representation (e.g., "#FF0000" for Red) of the {@link Team}.
