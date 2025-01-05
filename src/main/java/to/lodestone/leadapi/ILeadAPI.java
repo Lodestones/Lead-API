@@ -23,4 +23,5 @@ public interface ILeadAPI {
     ITeam createTeam(String id, UUID leader) throws TeamAlreadyExistsException;
     ITeam deleteTeam(String id) throws TeamNotFoundException;
     void removePlayerFromTeam(ITeam team, UUID player);
+    String getAvailableTeamNumber();
 }
