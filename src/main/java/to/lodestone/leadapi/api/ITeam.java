@@ -100,6 +100,9 @@ public interface ITeam {
     String getId();
     String getName();
 
+    void setColorName(boolean value);
+    boolean shouldColorName();
+
     void setCollidable(Team.OptionStatus status);
 
     Team.OptionStatus getCollidable();
