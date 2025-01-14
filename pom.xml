@@ -69,6 +69,7 @@
 	   <groupId>com.github.Lodestones</groupId>
 	   <artifactId>Bookshelf-API</artifactId>
 	   <version>v1.1.1</version>
+           <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.papermc.paper</groupId>
