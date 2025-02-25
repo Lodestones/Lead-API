@@ -5,14 +5,26 @@ import org.bukkit.event.Cancellable;
 import to.lodestone.bookshelfapi.api.event.BaseEvent;
 import to.lodestone.leadapi.api.ITeam;
 
-public class PostTeamCreateEvent extends BaseEvent {
+public class TeamJoinEvent extends BaseEvent implements Cancellable {
 
     private final Player player;
     private final ITeam team;
 
-    public PostTeamCreateEvent(Player player, ITeam team) {
+    private boolean isCancelled;
+
+    public TeamJoinEvent(ITeam team, Player player) {
         this.player = player;
         this.team = team;
+    }
+
+    @Override
+    public boolean isCancelled() {
+        return isCancelled;
+    }
+
+    @Override
+    public void setCancelled(boolean b) {
+        this.isCancelled = b;
     }
 
     public ITeam getTeam() {
@@ -22,5 +34,4 @@ public class PostTeamCreateEvent extends BaseEvent {
     public Player getPlayer() {
         return player;
     }
-
 }

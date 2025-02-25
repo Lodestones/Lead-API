@@ -1,28 +1,20 @@
 package to.lodestone.leadapi.api.event;
 
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import to.lodestone.bookshelfapi.api.event.BaseEvent;
 import to.lodestone.leadapi.api.ITeam;
 
-public class PreTeamKickEvent extends BaseEvent implements Cancellable {
+public class TeamLeaveEvent extends BaseEvent implements Cancellable {
 
+    private final OfflinePlayer player;
     private final ITeam team;
-    private final OfflinePlayer victim;
+
     private boolean isCancelled;
 
-    public PreTeamKickEvent(ITeam team, OfflinePlayer victim) {
+    public TeamLeaveEvent(OfflinePlayer player, ITeam team) {
+        this.player = player;
         this.team = team;
-        this.victim = victim;
-    }
-
-    public OfflinePlayer getVictim() {
-        return victim;
-    }
-
-    public ITeam getTeam() {
-        return team;
     }
 
     @Override
@@ -32,6 +24,15 @@ public class PreTeamKickEvent extends BaseEvent implements Cancellable {
 
     @Override
     public void setCancelled(boolean b) {
-        isCancelled = b;
+        this.isCancelled = b;
     }
+
+    public OfflinePlayer getPlayer() {
+        return player;
+    }
+
+    public ITeam getTeam() {
+        return team;
+    }
+
 }

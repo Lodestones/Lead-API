@@ -1,27 +1,28 @@
 package to.lodestone.leadapi.api.event;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
+import org.jetbrains.annotations.Nullable;
 import to.lodestone.bookshelfapi.api.event.BaseEvent;
 import to.lodestone.leadapi.api.ITeam;
 
-public class PostTeamLeaveEvent extends BaseEvent {
+public class TeamCreateEvent extends BaseEvent {
 
-    private final OfflinePlayer player;
+    private final @Nullable Player player;
     private final ITeam team;
 
-    public PostTeamLeaveEvent(OfflinePlayer player, ITeam team) {
+
+    public TeamCreateEvent(ITeam team, @Nullable Player player) {
         this.player = player;
         this.team = team;
     }
 
-    public OfflinePlayer getPlayer() {
-        return player;
-    }
-
     public ITeam getTeam() {
         return team;
+    }
+
+    @Nullable
+    public Player getPlayer() {
+        return player;
     }
 
 }

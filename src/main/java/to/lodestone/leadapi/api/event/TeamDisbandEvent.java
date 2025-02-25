@@ -4,17 +4,14 @@ import org.bukkit.event.Cancellable;
 import to.lodestone.bookshelfapi.api.event.BaseEvent;
 import to.lodestone.leadapi.api.ITeam;
 
-public class PreTeamDisbandEvent extends BaseEvent implements Cancellable {
+public class TeamDisbandEvent extends BaseEvent implements Cancellable {
 
     public ITeam team;
+
     private boolean isCancelled;
 
-    public PreTeamDisbandEvent(ITeam team) {
+    public TeamDisbandEvent(ITeam team) {
         this.team = team;
-    }
-
-    public ITeam getTeam() {
-        return team;
     }
 
     @Override
@@ -24,7 +21,11 @@ public class PreTeamDisbandEvent extends BaseEvent implements Cancellable {
 
     @Override
     public void setCancelled(boolean b) {
-        isCancelled = b;
+        this.isCancelled = b;
+    }
+
+    public ITeam getTeam() {
+        return team;
     }
 
 }

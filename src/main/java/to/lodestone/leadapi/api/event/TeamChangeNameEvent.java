@@ -4,17 +4,28 @@ import org.bukkit.event.Cancellable;
 import to.lodestone.bookshelfapi.api.event.BaseEvent;
 import to.lodestone.leadapi.api.ITeam;
 
-public class PreTeamChangeNameEvent extends BaseEvent implements Cancellable {
+public class TeamChangeNameEvent extends BaseEvent implements Cancellable {
 
     private final String oldName;
     private final String newName;
     private final ITeam team;
+
     private boolean isCancelled;
 
-    public PreTeamChangeNameEvent(ITeam team, String oldName, String newName) {
+    public TeamChangeNameEvent(ITeam team, String oldName, String newName) {
         this.team = team;
         this.oldName = oldName;
         this.newName = newName;
+    }
+
+    @Override
+    public boolean isCancelled() {
+        return isCancelled;
+    }
+
+    @Override
+    public void setCancelled(boolean b) {
+        this.isCancelled = b;
     }
 
     public String getNewName() {
@@ -29,13 +40,4 @@ public class PreTeamChangeNameEvent extends BaseEvent implements Cancellable {
         return team;
     }
 
-    @Override
-    public boolean isCancelled() {
-        return isCancelled;
-    }
-
-    @Override
-    public void setCancelled(boolean b) {
-        isCancelled = b;
-    }
 }
