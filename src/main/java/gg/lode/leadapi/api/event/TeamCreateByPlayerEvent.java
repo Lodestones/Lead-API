@@ -1,18 +1,18 @@
-package to.lodestone.leadapi.api.event;
+package gg.lode.leadapi.api.event;
 
+import gg.lode.bookshelfapi.api.event.BaseEvent;
+import gg.lode.leadapi.api.ITeam;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
-import to.lodestone.bookshelfapi.api.event.BaseEvent;
-import to.lodestone.leadapi.api.ITeam;
 
-public class TeamJoinEvent extends BaseEvent implements Cancellable {
+public class TeamCreateByPlayerEvent extends BaseEvent implements Cancellable {
 
     private final Player player;
     private final ITeam team;
 
     private boolean isCancelled;
 
-    public TeamJoinEvent(ITeam team, Player player) {
+    public TeamCreateByPlayerEvent(ITeam team, Player player) {
         this.player = player;
         this.team = team;
     }
@@ -34,4 +34,5 @@ public class TeamJoinEvent extends BaseEvent implements Cancellable {
     public Player getPlayer() {
         return player;
     }
+
 }

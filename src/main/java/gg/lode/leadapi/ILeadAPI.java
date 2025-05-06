@@ -1,12 +1,12 @@
-package to.lodestone.leadapi;
+package gg.lode.leadapi;
 
+import gg.lode.leadapi.api.GeneratorType;
+import gg.lode.leadapi.api.ITeam;
+import gg.lode.leadapi.api.exception.MaxTeamLimitException;
+import gg.lode.leadapi.api.exception.TeamAlreadyExistsException;
+import gg.lode.leadapi.api.exception.TeamNotFoundException;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.Nullable;
-import to.lodestone.leadapi.api.GeneratorType;
-import to.lodestone.leadapi.api.ITeam;
-import to.lodestone.leadapi.api.exception.MaxTeamLimitException;
-import to.lodestone.leadapi.api.exception.TeamAlreadyExistsException;
-import to.lodestone.leadapi.api.exception.TeamNotFoundException;
 
 import java.util.List;
 import java.util.UUID;

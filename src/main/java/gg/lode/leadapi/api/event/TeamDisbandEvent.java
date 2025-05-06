@@ -1,8 +1,8 @@
-package to.lodestone.leadapi.api.event;
+package gg.lode.leadapi.api.event;
 
+import gg.lode.bookshelfapi.api.event.BaseEvent;
+import gg.lode.leadapi.api.ITeam;
 import org.bukkit.event.Cancellable;
-import to.lodestone.bookshelfapi.api.event.BaseEvent;
-import to.lodestone.leadapi.api.ITeam;
 
 public class TeamDisbandEvent extends BaseEvent implements Cancellable {
 

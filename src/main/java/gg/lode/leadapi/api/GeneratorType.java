@@ -1,4 +1,4 @@
-package to.lodestone.leadapi.api;
+package gg.lode.leadapi.api;
 
 public enum GeneratorType {
     NUMBER,

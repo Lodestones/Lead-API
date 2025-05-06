@@ -1,7 +1,7 @@
-package to.lodestone.leadapi.api.event;
+package gg.lode.leadapi.api.event;
 
-import to.lodestone.bookshelfapi.api.event.BaseEvent;
-import to.lodestone.leadapi.api.ITeam;
+import gg.lode.bookshelfapi.api.event.BaseEvent;
+import gg.lode.leadapi.api.ITeam;
 
 public class TeamDeleteEvent extends BaseEvent {
 

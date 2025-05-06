@@ -69,7 +69,7 @@ To hook into the Lead API, you can use the [LeadHook](https://github.com/Lodesto
 Hooking into the Lead API.
 
 ```java
-import to.lodestone.leadapi.LeadAPI;
+import gg.lode.leadapi.LeadAPI;
 
 public class MainPlugin extends JavaPlugin {
 

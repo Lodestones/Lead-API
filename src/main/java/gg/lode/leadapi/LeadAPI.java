@@ -1,4 +1,4 @@
-package to.lodestone.leadapi;
+package gg.lode.leadapi;
 
 public class LeadAPI {
 

@@ -1,4 +1,4 @@
-package to.lodestone.leadapi.api.exception;
+package gg.lode.leadapi.api.exception;
 
 public class TeamNotFoundException extends Throwable {
 }
