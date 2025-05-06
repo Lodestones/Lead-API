@@ -6,7 +6,7 @@
 
     <groupId>gg.lode</groupId>
     <artifactId>Lead-API</artifactId>
-    <version>1.0.9</version>
+    <version>1.0.91</version>
     <packaging>jar</packaging>
 
     <name>Lead-API</name>
