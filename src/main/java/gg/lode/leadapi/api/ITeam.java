@@ -1,5 +1,6 @@
 package gg.lode.leadapi.api;
 
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
@@ -9,6 +10,21 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ITeam {
+
+    /**
+     * Sets the spawn location for the {@link Team}.
+     *
+     * @param location The {@link Location} to set as the spawn point.
+     */
+    void setSpawnLocation(@Nullable Location location);
+
+    /**
+     * Retrieves the spawn location of the {@link Team}.
+     *
+     * @return The {@link Location} of the spawn point, or {@code null} if not set.
+     */
+    @Nullable
+    Location getSpawnLocation();
 
     /**
      * Checks if a {@link org.bukkit.entity.Player} with the given {@link UUID} is a member of the {@link Team}.
