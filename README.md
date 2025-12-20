@@ -37,7 +37,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```java
     dependencies {
-        implementation 'com.github.Lodestones:Lead:1.0.6'
+        implementation 'com.github.Lodestones:Lead-API:1.1.1'
     }
 ```
 ## Maven
@@ -54,16 +54,16 @@ Add the dependency
 ```xml
     <dependency>
         <groupId>com.github.Lodestones</groupId>
-        <artifactId>Lead</artifactId>
-        <version>1.0.6</version>
+        <artifactId>Lead-API</artifactId>
+        <version>1.1.1</version>
     </dependency>
 ```
 
 # Documentation
 ## API
-The Lead API gives you two main classes that can help you with custom plugins that may use Lead. [ITeam](https://github.com/Lodestones/Lead/blob/master/src/main/java/xyz/apollo30/leadapi/api/team/ITeam.java) and [ITeamMember](https://github.com/Lodestones/Lead/blob/master/src/main/java/xyz/apollo30/leadapi/api/team/ITeamMember.java).
+The Lead API gives you two main classes that can help you with custom plugins that may use Lead. [ITeam](https://github.com/Lodestones/Lead/blob/master/src/main/java/gg/lode/leadapi/api/team/ITeam.java) and [ITeamMember](https://github.com/Lodestones/Lead/blob/master/src/main/java/gg/lode/leadapi/api/team/ITeamMember.java).
 
-To hook into the Lead API, you can use the [LeadHook](https://github.com/Lodestones/Lead/blob/master/src/main/java/xyz/apollo30/leadapi/LeadHook.java) class.
+To hook into the Lead API, you can use the [LeadAPI](https://github.com/Lodestones/Lead/blob/master/src/main/java/gg/lode/leadapi/LeadAPI.java) class.
 
 ## Usage
 Hooking into the Lead API.
