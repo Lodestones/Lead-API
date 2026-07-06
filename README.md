@@ -1,4 +1,7 @@
 # Lead API
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Lead API allows you to hook into the Lead Plugin that allows players to create visual based teams to help distinguish who is in whose team.
 
 ## Table of Contents
