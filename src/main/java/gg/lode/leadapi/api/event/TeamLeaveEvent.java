@@ -5,6 +5,9 @@ import gg.lode.leadapi.api.ITeam;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Cancellable;
 
+/**
+ * Fired when a member leaves a team. This event is cancellable; cancelling prevents the leave.
+ */
 public class TeamLeaveEvent extends BaseEvent implements Cancellable {
 
     private final OfflinePlayer player;
@@ -12,6 +15,12 @@ public class TeamLeaveEvent extends BaseEvent implements Cancellable {
 
     private boolean isCancelled;
 
+    /**
+     * Creates a new TeamLeaveEvent.
+     *
+     * @param player the player leaving the team
+     * @param team the team being left
+     */
     public TeamLeaveEvent(OfflinePlayer player, ITeam team) {
         this.player = player;
         this.team = team;
@@ -27,10 +36,20 @@ public class TeamLeaveEvent extends BaseEvent implements Cancellable {
         this.isCancelled = b;
     }
 
+    /**
+     * Gets the player leaving the team.
+     *
+     * @return the player
+     */
     public OfflinePlayer getPlayer() {
         return player;
     }
 
+    /**
+     * Gets the team being left.
+     *
+     * @return the team
+     */
     public ITeam getTeam() {
         return team;
     }

@@ -52,7 +52,18 @@ public interface ITeam {
      */
     void removeMember(UUID uniqueId);
 
+    /**
+     * Adds a {@link Player} to the {@link Team}.
+     *
+     * @param player The {@link Player} to add to the team.
+     */
     void addMember(Player player);
+
+    /**
+     * Adds a {@link ITeamMember} to the {@link Team}.
+     *
+     * @param player The {@link ITeamMember} to add to the team.
+     */
     void addMember(ITeamMember player);
 
     /**
@@ -70,8 +81,18 @@ public interface ITeam {
      */
     List<UUID> getInvitations();
 
+    /**
+     * Sends an invitation to a player to join the {@link Team}.
+     *
+     * @param uniqueId The {@link UUID} of the player to invite.
+     */
     void addInvitation(UUID uniqueId);
 
+    /**
+     * Removes an invitation for a player.
+     *
+     * @param uniqueId The {@link UUID} of the player whose invitation should be removed.
+     */
     void removeInvitation(UUID uniqueId);
 
     /**
@@ -81,9 +102,25 @@ public interface ITeam {
      */
     String getColor();
 
+    /**
+     * Sets the ID of the {@link Team}.
+     *
+     * @param id The new ID for the team.
+     */
     void setId(String id);
+
+    /**
+     * Sets the display name of the {@link Team}.
+     *
+     * @param name The new name for the team.
+     */
     void setName(String name);
 
+    /**
+     * Retrieves the {@link UUID} of the team leader.
+     *
+     * @return The {@link UUID} of the leader, or {@code null} if no leader is set.
+     */
     @Nullable
     UUID getLeaderUniqueId();
 
@@ -101,6 +138,11 @@ public interface ITeam {
      */
     UUID getUniqueId();
 
+    /**
+     * Retrieves all members of the {@link Team}.
+     *
+     * @return A {@link List} of all {@link ITeamMember}s in this team.
+     */
     List<ITeamMember> getMembers();
 
     /**
@@ -111,20 +153,73 @@ public interface ITeam {
      */
     void save(FileConfiguration file);
 
+    /**
+     * Retrieves the ID of the {@link Team}.
+     *
+     * @return The team's ID.
+     */
     String getId();
+
+    /**
+     * Retrieves the display name of the {@link Team}.
+     *
+     * @return The team's name.
+     */
     String getName();
 
+    /**
+     * Sets whether the team's name should use the team's color in chat displays.
+     *
+     * @param value {@code true} to color the team name, {@code false} otherwise.
+     */
     void setColorName(boolean value);
+
+    /**
+     * Checks if the team's name should be colored in chat displays.
+     *
+     * @return {@code true} if the team name is colored, otherwise {@code false}.
+     */
     boolean shouldColorName();
 
+    /**
+     * Sets the collision status for members of the {@link Team}.
+     *
+     * @param status The {@link Team.OptionStatus} to apply (ALWAYS, NEVER, or PUSH_OTHER_TEAMS).
+     */
     void setCollidable(Team.OptionStatus status);
 
+    /**
+     * Retrieves the collision status for members of the {@link Team}.
+     *
+     * @return The {@link Team.OptionStatus} for collision settings.
+     */
     Team.OptionStatus getCollidable();
 
+    /**
+     * Sets the name tag visibility for members of the {@link Team}.
+     *
+     * @param status The {@link Team.OptionStatus} to apply (ALWAYS, NEVER, or HIDE_FOR_OTHER_TEAMS).
+     */
     void setNameTagVisibility(Team.OptionStatus status);
+
+    /**
+     * Retrieves the name tag visibility setting for members of the {@link Team}.
+     *
+     * @return The {@link Team.OptionStatus} for name tag visibility.
+     */
     Team.OptionStatus getNameTagVisibility();
 
+    /**
+     * Sets whether friendly fire is allowed between team members.
+     *
+     * @param value {@code true} to allow friendly fire, {@code false} otherwise.
+     */
     void setFriendlyFireAllowed(boolean value);
 
+    /**
+     * Checks if friendly fire is allowed between team members.
+     *
+     * @return {@code true} if friendly fire is enabled, otherwise {@code false}.
+     */
     boolean isFriendlyFireAllowed();
 }

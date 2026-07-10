@@ -5,6 +5,12 @@ import gg.lode.leadapi.api.ITeam;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
+/**
+ * Fired when a player joins a team.
+ * <p>
+ * This event is cancellable. If cancelled, the join is prevented.
+ * </p>
+ */
 public class TeamJoinEvent extends BaseEvent implements Cancellable {
 
     private final Player player;
@@ -12,6 +18,12 @@ public class TeamJoinEvent extends BaseEvent implements Cancellable {
 
     private boolean isCancelled;
 
+    /**
+     * Creates a new TeamJoinEvent.
+     *
+     * @param team the {@link ITeam} the player is joining
+     * @param player the {@link Player} joining the team
+     */
     public TeamJoinEvent(ITeam team, Player player) {
         this.player = player;
         this.team = team;
@@ -27,10 +39,20 @@ public class TeamJoinEvent extends BaseEvent implements Cancellable {
         this.isCancelled = b;
     }
 
+    /**
+     * Gets the team the player is joining.
+     *
+     * @return the {@link ITeam}
+     */
     public ITeam getTeam() {
         return team;
     }
 
+    /**
+     * Gets the player joining the team.
+     *
+     * @return the {@link Player}
+     */
     public Player getPlayer() {
         return player;
     }
