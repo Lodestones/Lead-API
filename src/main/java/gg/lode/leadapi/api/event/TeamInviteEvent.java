@@ -7,12 +7,14 @@ import org.bukkit.event.Cancellable;
 
 public class TeamInviteEvent extends BaseEvent implements Cancellable {
 
+    private final Player sender;
     private final Player target;
     private final ITeam team;
 
     private boolean isCancelled;
 
-    public TeamInviteEvent(ITeam team, Player target) {
+    public TeamInviteEvent(ITeam team, Player sender, Player target) {
+        this.sender = sender;
         this.target = target;
         this.team = team;
     }
@@ -29,6 +31,10 @@ public class TeamInviteEvent extends BaseEvent implements Cancellable {
 
     public ITeam getTeam() {
         return team;
+    }
+
+    public Player getSender() {
+        return sender;
     }
 
     public Player getTarget() {
